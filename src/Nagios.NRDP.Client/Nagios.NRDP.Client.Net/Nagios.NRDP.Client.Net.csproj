@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Enums\HostState.cs" />
     <Compile Include="Enums\ServiceState.cs" />
+    <Compile Include="Helpers\HttpHelper.cs" />
     <Compile Include="INagiosNrdpClient.cs" />
     <Compile Include="Models\Request\CheckData.cs" />
     <Compile Include="Models\Request\Host.cs" />
