@@ -1,8 +1,12 @@
-﻿using Nagios.NRDP.Client.Net.Models.Request;
+﻿using Nagios.NRDP.Client.Net.Helpers;
+using Nagios.NRDP.Client.Net.Models.Request;
 using Nagios.NRDP.Client.Net.Models.Response;
 using System;
+using System.Collections.Specialized;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Xml.Serialization;
 
 namespace Nagios.NRDP.Client.Net
 {
@@ -33,6 +37,8 @@ namespace Nagios.NRDP.Client.Net
 
         public Result SubmitChackData(params INagiosItem[] items)
         {
+            var result = new Result();
+
             if (items.Length == 0)
             {
                 throw new ArgumentException("There are no entered INagiosItem elements");
@@ -44,9 +50,22 @@ namespace Nagios.NRDP.Client.Net
             items.ToList().ForEach(n => builder.Append(n.GenerateItemData()));
             builder.Append("</checkresults>");
 
-            // TODO: send
+            var parameters = new NameValueCollection
+            {
+                {"cmd", "submitcheck"},
+                {"token", Token},
+                {"XMLDATA", builder.ToString()}
+            };
 
-            return null;
+            var response = HttpHelper.Post(ApiUri, parameters);
+
+            var serializer = new XmlSerializer(typeof(Result));
+            using (TextReader reader = new StringReader(response))
+            {
+                result = (Result)serializer.Deserialize(reader);
+            }
+
+            return result;
         }
     }
 }

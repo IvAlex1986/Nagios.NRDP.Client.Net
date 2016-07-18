@@ -61,7 +61,7 @@ namespace Nagios.NRDP.Client.Net.Models.Request
             var data = String.Join(" ", CheckDatas);
             var delimiter = String.IsNullOrEmpty(data) ? String.Empty : "|";
 
-            builder.AppendFormat("<checkresult type='{0}'>", GetType());
+            builder.AppendFormat("<checkresult type='{0}'>", GetItemType());
             builder.AppendFormat("<hostname>{0}</hostname>", HostName);
             builder.AppendFormat("<state>{0}</state>", State);
             builder.AppendFormat("<output>{0}{1}{2}</output>", StatusData, delimiter, data);
@@ -70,7 +70,6 @@ namespace Nagios.NRDP.Client.Net.Models.Request
 
             return builder.ToString();
         }
-
 
         #endregion
     }

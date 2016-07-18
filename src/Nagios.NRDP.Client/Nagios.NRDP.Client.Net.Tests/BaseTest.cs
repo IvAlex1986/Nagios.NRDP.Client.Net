@@ -19,5 +19,10 @@ namespace Nagios.NRDP.Client.Net.Tests
         {
             return new NagiosNrdpClient(ApiUrl, Token);
         }
+
+        protected INagiosNrdpClient GetNagiosNrdpClient(String apiUrl, String token)
+        {
+            return new NagiosNrdpClient(apiUrl, token);
+        }
     }
 }

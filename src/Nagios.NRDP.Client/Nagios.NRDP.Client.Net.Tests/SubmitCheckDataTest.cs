@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Nagios.NRDP.Client.Net.Enums;
+﻿using Nagios.NRDP.Client.Net.Enums;
 using Nagios.NRDP.Client.Net.Models.Request;
 using NUnit.Framework;
+using System;
+using System.Collections.Generic;
 
 namespace Nagios.NRDP.Client.Net.Tests
 {
@@ -21,8 +18,12 @@ namespace Nagios.NRDP.Client.Net.Tests
         [Test]
         public void TestInvalidToken()
         {
-            var client = GetNagiosNrdpClient();
-            // TODO: test
+            var client = GetNagiosNrdpClient(ApiUrl, String.Empty);
+            var result = client.SubmitChackData(new Host("Test"));
+
+            Assert.IsNotNull(result);
+            Assert.IsFalse(result.IsSuccess);
+            Assert.IsNotEmpty(result.Message);
         }
 
         [Test]
@@ -59,7 +60,13 @@ namespace Nagios.NRDP.Client.Net.Tests
                 }
             };
 
-            client.SubmitChackData(host, service);
+            var result = client.SubmitChackData(host, service);
+
+            Assert.IsNotNull(result);
+            Assert.IsTrue(result.IsSuccess);
+            Assert.IsNotEmpty(result.Message);
+            Assert.IsNotEmpty(result.Outputs);
+            Assert.IsNotEmpty(result.Output);
         }
     }
 }

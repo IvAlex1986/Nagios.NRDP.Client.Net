@@ -55,7 +55,7 @@ namespace Nagios.NRDP.Client.Net.Models.Request
         public override string ToString()
         {
             var values = String.Join(";", new[] {WarningScale, ErrorScale, MinScale, MaxScale});
-            return String.Format("{0}={1}{2} {3}", Name, Value, Dimension, values);
+            return String.Format("{0}={1}{2};{3}", Name, Value, Dimension, values);
         }
     }
 }
