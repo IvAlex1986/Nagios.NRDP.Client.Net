@@ -12,14 +12,14 @@ namespace Nagios.NRDP.Client.Net.Tests
         public void TestInvalidArguments()
         {
             var client = GetNagiosNrdpClient();
-            Assert.Throws<ArgumentException>(() => client.SubmitChackData());
+            Assert.Throws<ArgumentException>(() => client.SubmitCheckData());
         }
 
         [Test]
         public void TestInvalidToken()
         {
             var client = GetNagiosNrdpClient(ApiUrl, String.Empty);
-            var result = client.SubmitChackData(new Host("Test"));
+            var result = client.SubmitCheckData(new Host("Test"));
 
             Assert.IsNotNull(result);
             Assert.IsFalse(result.IsSuccess);
@@ -60,7 +60,7 @@ namespace Nagios.NRDP.Client.Net.Tests
                 }
             };
 
-            var result = client.SubmitChackData(host, service);
+            var result = client.SubmitCheckData(host, service);
 
             Assert.IsNotNull(result);
             Assert.IsTrue(result.IsSuccess);

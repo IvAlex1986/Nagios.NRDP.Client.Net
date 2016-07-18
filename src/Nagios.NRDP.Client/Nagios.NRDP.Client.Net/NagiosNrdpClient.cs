@@ -35,10 +35,8 @@ namespace Nagios.NRDP.Client.Net
             set;
         }
 
-        public Result SubmitChackData(params INagiosItem[] items)
+        public Result SubmitCheckData(params INagiosItem[] items)
         {
-            var result = new Result();
-
             if (items.Length == 0)
             {
                 throw new ArgumentException("There are no entered INagiosItem elements");
@@ -62,10 +60,8 @@ namespace Nagios.NRDP.Client.Net
             var serializer = new XmlSerializer(typeof(Result));
             using (TextReader reader = new StringReader(response))
             {
-                result = (Result)serializer.Deserialize(reader);
+                return (Result)serializer.Deserialize(reader);
             }
-
-            return result;
         }
     }
 }

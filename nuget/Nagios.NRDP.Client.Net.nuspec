@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>Nagios.NRDP.Client.Net</id>
+        <version>1.0.1</version>
+        <authors>Alexander Ivakhnenko</authors>
+        <licenseUrl>https://github.com/IvAlex1986/Nagios.NRDP.Client.Net/blob/master/LICENSE</licenseUrl>
+        <projectUrl>https://github.com/IvAlex1986/Nagios.NRDP.Client.Net</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Nagios NRDP Client for .NET</description>
+        <tags>nagios nrdp nagios-nrdp monitoring</tags>
+    </metadata>
+    <files>
+        <file src="..\src\Nagios.NRDP.Client\Nagios.NRDP.Client.Net\bin\Release\Nagios.NRDP.Client.Net.dll" target="lib\Nagios.NRDP.Client.Net.dll" />
+    </files>
+</package>

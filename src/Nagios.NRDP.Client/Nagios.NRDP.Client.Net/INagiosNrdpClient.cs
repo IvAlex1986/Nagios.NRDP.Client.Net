@@ -10,6 +10,6 @@ namespace Nagios.NRDP.Client.Net
 
         String Token { get; }
 
-        Result SubmitChackData(params INagiosItem[] items);
+        Result SubmitCheckData(params INagiosItem[] items);
     }
 }
