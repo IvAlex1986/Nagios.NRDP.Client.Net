@@ -1,9 +1,12 @@
 # Nagios.NRDP.Client.Net
-Nagios.NRDP.Client.Net is a wrapper made for .NET, which works with [NRDP](https://exchange.nagios.org/directory/Addons/Passive-Checks/NRDP--2D-Nagios-Remote-Data-Processor/details) (Nagios Remote Data Processor) API.
+<img src="https://github.com/IvAlex1986/Nagios.NRDP.Client.Net/blob/master/Nagios.png" width="250" />
 <br />
-The official overview documentation see [here](http://library.nagios.com/library/products/nagiosxi/documentation/499-nrdp-overview).
-<br />
-About configuring API for Nagios XI see [here](https://library.nagios.com/library/products/nagiosxi/documentation/673-nagios-xi-passive-monitoring-with-nrdswin).
+**Nagios.NRDP.Client.Net** is a wrapper made for .NET, which works with [NRDP](https://exchange.nagios.org/directory/Addons/Passive-Checks/NRDP--2D-Nagios-Remote-Data-Processor/details) (Nagios Remote Data Processor) API.
+
+# Links
+* The official NRDP overview documentation [here](http://library.nagios.com/library/products/nagiosxi/documentation/499-nrdp-overview).
+* About configuring API for Nagios XI you can see [here](https://library.nagios.com/library/products/nagiosxi/documentation/673-nagios-xi-passive-monitoring-with-nrdswin).
+* And also Nagios start [page](https://www.nagios.org/)
 
 # Build Status
 [![Build Status](https://travis-ci.org/IvAlex1986/Nagios.NRDP.Client.Net.svg?branch=master)](https://travis-ci.org/IvAlex1986/Nagios.NRDP.Client.Net)
