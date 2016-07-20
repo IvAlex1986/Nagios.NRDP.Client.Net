@@ -48,7 +48,7 @@ namespace Nagios.NRDP.Client.Net.Models.Request
             set;
         }
 
-        public IEnumerable<CheckData> CheckDatas
+        public IList<CheckData> CheckDatas
         {
             get;
             set;

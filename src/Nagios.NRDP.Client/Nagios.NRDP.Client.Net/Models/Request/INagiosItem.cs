@@ -13,7 +13,7 @@ namespace Nagios.NRDP.Client.Net.Models.Request
 
         String StatusData { get; }
 
-        IEnumerable<CheckData> CheckDatas { get; }
+        IList<CheckData> CheckDatas { get; }
 
         String GenerateItemData();
     }

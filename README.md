@@ -4,9 +4,9 @@
 **Nagios.NRDP.Client.Net** is a wrapper made for .NET, which works with [NRDP](https://exchange.nagios.org/directory/Addons/Passive-Checks/NRDP--2D-Nagios-Remote-Data-Processor/details) (Nagios Remote Data Processor) API.
 
 # Links
-* The official NRDP overview documentation [here](http://library.nagios.com/library/products/nagiosxi/documentation/499-nrdp-overview).
-* About configuring API for Nagios XI you can see [here](https://library.nagios.com/library/products/nagiosxi/documentation/673-nagios-xi-passive-monitoring-with-nrdswin).
-* And also Nagios start [page](https://www.nagios.org/)
+* The official NRDP overview [documentation](http://library.nagios.com/library/products/nagiosxi/documentation/499-nrdp-overview)
+* See [here](https://library.nagios.com/library/products/nagiosxi/documentation/673-nagios-xi-passive-monitoring-with-nrdswin) about configuring API for Nagios XI
+* Nagios start [page](https://www.nagios.org/)
 
 # Build Status
 [![Build Status](https://travis-ci.org/IvAlex1986/Nagios.NRDP.Client.Net.svg?branch=master)](https://travis-ci.org/IvAlex1986/Nagios.NRDP.Client.Net)
@@ -38,7 +38,7 @@ namespace Nagios.NRDP.Client.Net.Example
             _nagiosNrdpClient = new NagiosNrdpClient(apiUrl, token);
         }
 
-        public Result SendData()
+        public Result SubmitData()
         {
             var host = new Host("Test")
             {
@@ -77,6 +77,10 @@ namespace Nagios.NRDP.Client.Net.Example
 }
 
 ```
+
+Result of this example API call is bellow:
+<img src="https://github.com/IvAlex1986/Nagios.NRDP.Client.Net/blob/master/Metrics.png" />
+<br />
 
 # License
 This project is licensed under the [MIT license](https://github.com/IvAlex1986/Nagios.NRDP.Client.Net/blob/master/LICENSE).
