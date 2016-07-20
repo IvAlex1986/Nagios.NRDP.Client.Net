@@ -79,8 +79,8 @@ namespace Nagios.NRDP.Client.Net.Example
 ```
 
 Result of this example API call is bellow:
-<img src="https://github.com/IvAlex1986/Nagios.NRDP.Client.Net/blob/master/Metrics.png" />
 <br />
+<img src="https://github.com/IvAlex1986/Nagios.NRDP.Client.Net/blob/master/Metrics.png" />
 
 # License
 This project is licensed under the [MIT license](https://github.com/IvAlex1986/Nagios.NRDP.Client.Net/blob/master/LICENSE).
