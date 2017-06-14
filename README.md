@@ -1,6 +1,6 @@
 # Nagios.NRDP.Client.Net
 <img src="https://github.com/IvAlex1986/Nagios.NRDP.Client.Net/blob/master/Nagios.png" width="250" />
-<br />
+
 **Nagios.NRDP.Client.Net** is a wrapper made for .NET, which works with [NRDP](https://exchange.nagios.org/directory/Addons/Passive-Checks/NRDP--2D-Nagios-Remote-Data-Processor/details) (Nagios Remote Data Processor) API.
 
 # Links
